@@ -482,6 +482,7 @@ form input {
 
 }
 
+#chat_reply_empty,
 #chat_reply {
 	position: absolute;
 	margin: 0 auto;

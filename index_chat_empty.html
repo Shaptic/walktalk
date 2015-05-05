@@ -10,17 +10,25 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
 		</script>
 		<script src = "assets/js/script.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				$("#chat_editable-screen").show("slow");
+		<script type="text/javascript">
+		$(document).ready(function() {
+			var c = $("#chat_reply-container");
+			$("#convo").on("click", function() {
+				if (c.hasClass("active")) {
+					c.removeClass("active").animate({top: "+=275px"});
+				}
 			});
-			</script>
+
+			$("#chat_reply_empty").on("click", function() {
+				if (!c.hasClass("active")) {
+					c.addClass("active").animate({top: "-=275px"});
+				}
+			});
+		});
+		</script>
 	</head>
 
-
 	<body>
-
 	<div id="phone-container">
 		<img src="assets/img/Nexus5.png">
 		<div id="screen-container-white">
@@ -31,9 +39,12 @@
 					<div id="top-bar-text">Chat with Oski Bear III</div>
 				</div>
 
+				<div id="convo" style="height: 500px">
+				</div>
 				<div id="chat_reply-container">
 					<div id="chat_reply-outer">
-						<input type="text" id="chat_reply" placeholder="Start a conversation"/>
+						<input type="text" id="chat_reply_empty"
+							placeholder="Start a conversation"/>
 					</div>
 					<div id="chat_keyboard">
 						<img src="assets/img/Keyboard.png">
