@@ -561,6 +561,10 @@ should be same between all screens*/
 	height: calc(100% - 50px);
 }
 
+.screen {
+	display: none;
+}
+
 .screen,
 #editable-screen {
 	position: absolute;

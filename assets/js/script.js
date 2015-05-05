@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $(".screen").show("slow");
     $("#start-walking-button").click(function() {
         $(".before-start").fadeOut();
     });
