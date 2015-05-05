@@ -597,6 +597,7 @@ should be same between all screens*/
 
 
 #chat-button {
+	z-index: 0;
 	position: absolute;
 	width: 32px;
 	height: 30px;
@@ -656,4 +657,15 @@ a {
     color: black;
 }
 
-
+#chat-notif {
+	position: absolute;
+	width: 15px;
+	height: auto;
+	right: -5px;
+	bottom: 22px;
+	background-color: #FFD07B;
+	border-radius: 7px;
+	z-index: 5;
+	text-align: center;
+	font-size: 12px;
+}
